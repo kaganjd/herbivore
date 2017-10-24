@@ -1,5 +1,6 @@
 // Network States
 export const SET_NETWORK_INFO = 'SET_NETWORK_INFO'
+export const REFRESH_NETWORK_INFO = 'REFRESH_NETWORK_INFO'
 export const SET_HOST_INFO = 'SET_HOST_INFO'
 export const SET_PUBLIC_IP = 'SET_PUBLIC_IP'
 export const ADD_DEVICE = 'ADD_DEVICE'

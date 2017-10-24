@@ -46,6 +46,9 @@ const actions = {
   setNetworkInfo ({commit, state}, info) {
     commit(types.SET_NETWORK_INFO, info)
   },
+  refreshNetworkInfo ({commit, state}) {
+    commit(types.REFRESH_NETWORK_INFO)
+  },
   setHostInfo ({commit, state}, info) {
     commit(types.SET_HOST_INFO, info)
   },
@@ -78,6 +81,9 @@ const actions = {
 const mutations = {
   [types.SET_NETWORK_INFO] (state, info) {
     state.network = info
+  },
+  [types.REFRESH_NETWORK_INFO] (state) {
+    state.network = null
   },
   [types.SET_HOST_INFO] (state, info) {
     state.host = {

@@ -21,6 +21,11 @@
           </transition>
           </div>
         <div  class="nav-right">
+            <a @click="refresh" class="nav-item">
+              <span>
+                 <i class="fa fa-refresh" aria-hidden="true"></i>
+              </span>
+            </a>
             <a  @click="goLeft" class="nav-item">
               <span :class="view.index > 0 ? ['icon', 'highlight'] : ['icon']">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -65,6 +70,9 @@ export default {
     route: 'route'
   }),
   methods: {
+    refresh: function () {
+      this.refreshNetworkInfo()
+    },
     goRight: function () {
       this.incViewIndex()
       this.$router.push({
@@ -87,6 +95,7 @@ export default {
         })
     },
     ...mapActions([
+      'refreshNetworkInfo',
       'incViewIndex',
       'decViewIndex',
       'toggleSidebar',
