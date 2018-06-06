@@ -1,3 +1,4 @@
+
 $lime-green: rgba(169, 194, 66, 1);
 $purplecolor: rgba(72, 60, 70, 1);
 $sea-green: rgba(60, 110, 113, 1);
@@ -15,8 +16,12 @@ $orange-yellow: rgba(255, 209, 102, 1);
 // https://www.christianengvall.se/electron-frameless-window/
 
 body {
-    -ms-overflow-style: scrollbar;
-    -webkit-app-region:drag;
+  -ms-overflow-style: scrollbar;
+  -webkit-app-region:drag;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input[type="submit"],
@@ -25,15 +30,19 @@ input[type="button"],
 input[type="text"],
 button,
 textarea {
-    -webkit-app-region: no-drag;
+  -webkit-app-region: no-drag;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    -webkit-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.selectable-text {
--webkit-user-select: all;
--moz-user-select: all;
--ms-user-select: all;
-user-select: all;
-}
+
+// .selectable-text {
+// -webkit-user-select: all;
+// -moz-user-select: all;
+// -ms-user-select: all;
+// user-select: all;
+// }
